@@ -1,4 +1,4 @@
-package game.entity.state;
+package game.state.collections;
 
 import game.entity.Minion;
 

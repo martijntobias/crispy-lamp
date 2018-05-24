@@ -1,4 +1,4 @@
 package game.entity;
 
-public class Spell extends Entity {
+public class Spell extends Card {
 }

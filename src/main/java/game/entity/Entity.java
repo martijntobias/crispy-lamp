@@ -3,12 +3,13 @@ package game.entity;
 /**
  * The Entity class is a the highest superclass for in-game entities, as follows:
  * Entity
+ *  Card
+ *      Spell
+ *      Weapon
+ *      Character
+ *          Minion
+ *          Hero
  *  Hero Power
- *  Spell
- *  Weapon
- *  Character
- *      Minion
- *      Hero
  */
 public abstract class Entity {
     protected String name;
