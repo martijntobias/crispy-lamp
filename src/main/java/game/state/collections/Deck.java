@@ -1,11 +1,14 @@
 package game.state.collections;
 
 import game.entity.Card;
+import game.state.State;
+import org.apache.commons.lang.SerializationUtils;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Deck {
+public class Deck implements Serializable {
 
     private final int MAX_SIZE = 60;
 
@@ -32,7 +35,7 @@ public class Deck {
     }
 
     /**
-     * Adds the card to the hand. Will return false and do nothing with the card if the hand is already full.
+     * Adds the card to the deck. Will return false and do nothing with the card if the hand is already full.
      * @param card
      * @return
      */
@@ -43,5 +46,21 @@ public class Deck {
             cards.add(card);
             return true;
         }
+    }
+
+    /**
+     * Adds all the cards to the deck. Will return wether or not all have been succesfully added.
+     * @param cards
+     * @return
+     */
+    public boolean addAll(List<Card> cards) {
+        boolean all = true;
+        for(Card card : cards) {
+            all = add(card);
+            if(!all) {
+                break;
+            }
+        }
+        return all;
     }
 }

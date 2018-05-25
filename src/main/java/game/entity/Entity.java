@@ -1,5 +1,10 @@
 package game.entity;
 
+import game.state.State;
+import org.apache.commons.lang.SerializationUtils;
+
+import java.io.Serializable;
+
 /**
  * The Entity class is a the highest superclass for in-game entities, as follows:
  * Entity
@@ -11,13 +16,9 @@ package game.entity;
  *          Hero
  *  Hero Power
  */
-public abstract class Entity {
+public abstract class Entity implements Serializable{
     protected String name;
     protected int cost;
-
-    public String toString() {
-        return String.format("Entity : {\"name\" : \"%s\"}", name);
-    }
 
     public String getName() {
         return name;

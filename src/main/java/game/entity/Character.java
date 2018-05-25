@@ -6,8 +6,4 @@ package game.entity;
 public abstract class Character extends Card {
     protected int attack;
     protected int health;
-
-    public String toString() {
-        return String.format("Character : {\"name\" : \"%s\"}", name);
-    }
 }

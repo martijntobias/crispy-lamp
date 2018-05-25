@@ -4,12 +4,17 @@ import game.entity.Hero;
 import game.state.collections.Board;
 import game.state.collections.Deck;
 import game.state.collections.Hand;
+import org.apache.commons.lang.SerializationUtils;
 import player.Player;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-public class State {
+/**
+ * Contains all information regarding the game's State.
+ */
+public class State implements Cloneable, Serializable {
     private final Player player1;
     private final Player player2;
 
@@ -33,5 +38,9 @@ public class State {
         this.hands = new HashMap<>();
 
         this.boards = new HashMap<>();
+    }
+
+    public State clone() {
+        return (State) SerializationUtils.clone(this);
     }
 }
