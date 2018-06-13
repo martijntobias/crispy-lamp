@@ -1,5 +1,37 @@
 [
   {
+    "name": "Acidic Swamp Ooze",
+    "attack": 3,
+    "health": 2,
+    "cost":2
+  },
+  {
+    "name": "Archmage",
+    "attack": 4,
+    "health": 7,
+    "cost":6
+  },
+  {
+    "name": "Bloodfen Raptor",
+    "attack": 3,
+    "health": 2,
+    "cost":2,
+    "type": "Beast"
+  },
+  {
+    "name": "Bluegill Warrior",
+    "attack": 2,
+    "health": 1,
+    "cost":2,
+    "type": "Murloc"
+  },
+  {
+    "name": "Booty Bay Bodyguard",
+    "attack": 5,
+    "health": 4,
+    "cost":5
+  },
+  {
     "name": "Boulderfirst Ogre",
     "attack": 6,
     "health": 7,
@@ -9,12 +41,232 @@
     "name": "Chillwind Yeti",
     "attack": 4,
     "health": 5,
+    "cost":4
+  },
+  {
+    "name": "Core Hound",
+    "attack": 9,
+    "health": 5,
+    "cost": 7,
+    "type": "Beast"
+  },
+  {
+    "name": "Dalaran Mage",
+    "attack": 3,
+    "health": 1,
+    "cost":4
+  },
+  {
+    "name": "Darkscale Healer",
+    "attack": 4,
+    "health": 5,
+    "cost":5
+  },
+  {
+    "name": "Dragonling Mechanic",
+    "attack": 2,
+    "health": 4,
+    "cost":4
+  },
+  {
+    "name": "Elven Archer",
+    "attack": 1,
+    "health": 1,
+    "cost":1
+  },
+  {
+    "name": "Frostwolf Grunt",
+    "attack": 2,
+    "health": 2,
+    "cost":2
+  },
+  {
+    "name": "Frostwolf Warlord",
+    "attack": 4,
+    "health": 4,
+    "cost":5
+  },
+  {
+    "name": "Gnomish Inventor",
+    "attack": 2,
+    "health": 4,
+    "cost":4
+  },
+  {
+    "name": "Goldshire Footman",
+    "attack": 1,
+    "health": 2,
+    "cost":1
+  },
+  {
+    "name": "Grimscale Oracle",
+    "attack": 1,
+    "health": 1,
+    "cost": 1,
+    "type": "Murloc"
+  },
+  {
+    "name": "Gurubashi Berserker",
+    "attack": 2,
+    "health": 7,
+    "cost": 5
+  },
+  {
+    "name": "Ironforge Rifleman",
+    "attack": 2,
+    "health": 2,
+    "cost": 3
+  },
+  {
+    "name": "Ironfur Grizzly",
+    "attack": 3,
+    "health": 3,
+    "cost": 3,
+    "type": "Beast"
+  },
+  {
+    "name": "Kobold Geomancer",
+    "attack": 2,
+    "health": 2,
+    "cost": 2
+  },
+  {
+    "name": "Lord of the Arena",
+    "attack": 6,
+    "health": 5,
+    "cost": 6
+  },
+  {
+    "name": "Magma Rager",
+    "attack": 5,
+    "health": 1,
+    "cost": 3,
+    "type": "Elemental"
+  },
+  {
+    "name": "Murloc Raider",
+    "attack": 2,
+    "health": 1,
+    "cost": 1,
+    "type": "Murloc"
+  },
+  {
+    "name": "Murloc Tidehunter",
+    "attack": 2,
+    "health": 1,
+    "cost": 2,
+    "type": "Murloc"
+  },
+  {
+    "name": "Nightblade",
+    "attack": 4,
+    "health": 4,
+    "cost": 5
+  },
+  {
+    "name": "Novice Engineer",
+    "attack": 1,
+    "health": 1,
+    "cost": 2
+  },
+  {
+    "name": "Oasis Snapjaw",
+    "attack": 2,
+    "health": 7,
+    "cost": 4,
+    "type": "Beast"
+  },
+  {
+    "name": "Ogre Magi",
+    "attack": 4,
+    "health": 4,
     "cost": 4
+  },
+  {
+    "name": "Raid Leader",
+    "attack": 2,
+    "health": 2,
+    "cost": 3
+  },
+  {
+    "name": "Razorfen Hunter",
+    "attack": 2,
+    "health": 3,
+    "cost": 3
+  },
+  {
+    "name": "Reckless Rocketeer",
+    "attack": 5,
+    "health": 6,
+    "cost": 2
+  },
+  {
+    "name": "River Crocolisk",
+    "attack": 2,
+    "health": 3,
+    "cost": 2,
+    "type": "Beast"
+  },
+  {
+    "name": "Sen'jin Shieldmasta",
+    "attack": 3,
+    "health": 5,
+    "cost": 4
+  },
+  {
+    "name": "Shattered Sun Cleric",
+    "attack": 3,
+    "health": 2,
+    "cost": 3
+  },
+  {
+    "name": "Silverback Patriarch",
+    "attack": 1,
+    "health": 4,
+    "cost": 3,
+    "type": "Beast"
+  },
+  {
+    "name": "Stonetusk Boar",
+    "attack": 1,
+    "health": 1,
+    "cost": 1,
+    "type": "Beast"
+  },
+  {
+    "name": "Stormpike Commando",
+    "attack": 4,
+    "health": 2,
+    "cost": 5
+  },
+  {
+    "name": "Stormwind Champion",
+    "attack": 6,
+    "health": 6,
+    "cost": 7
+  },
+  {
+    "name": "Stormwind Knight",
+    "attack": 2,
+    "health": 5,
+    "cost": 4
+  },
+  {
+    "name": "Voodoo Doctor",
+    "attack": 2,
+    "health": 1,
+    "cost": 1
   },
   {
     "name": "War Golem",
     "attack": 7,
     "health": 7,
     "cost": 7
+  },
+  {
+    "name": "Wolfrider",
+    "attack": 3,
+    "health": 1,
+    "cost": 3
   }
 ]

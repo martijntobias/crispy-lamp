@@ -1,4 +1,7 @@
-package game.entity;
+package game.entity.card.character;
+
+import game.entity.Type;
+import game.entity.card.Card;
 
 /**
  * Abstract superclass to Minions and Heroes.
@@ -6,4 +9,5 @@ package game.entity;
 public abstract class Character extends Card {
     protected int attack;
     protected int health;
+    protected Type type;
 }

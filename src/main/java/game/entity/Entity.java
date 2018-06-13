@@ -16,7 +16,7 @@ import java.io.Serializable;
  *          Hero
  *  Hero Power
  */
-public abstract class Entity implements Serializable{
+public abstract class Entity implements Serializable {
     protected String name;
     protected int cost;
 

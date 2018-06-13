@@ -1,4 +1,4 @@
-package game.entity;
+package game.entity.card;
 
 public class Weapon extends Card {
     private int attack;

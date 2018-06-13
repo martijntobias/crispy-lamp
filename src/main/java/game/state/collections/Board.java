@@ -1,6 +1,6 @@
 package game.state.collections;
 
-import game.entity.Minion;
+import game.entity.card.character.Minion;
 
 import java.util.ArrayList;
 import java.util.List;

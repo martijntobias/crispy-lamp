@@ -1,8 +1,6 @@
 package game.state.collections;
 
-import game.entity.Card;
-import game.state.State;
-import org.apache.commons.lang.SerializationUtils;
+import game.entity.card.Card;
 
 import java.io.Serializable;
 import java.util.ArrayList;

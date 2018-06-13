@@ -1,6 +1,6 @@
 package player;
 
-import game.entity.Hero;
+import game.entity.card.character.Hero;
 import game.state.collections.Deck;
 
 public abstract class Player {

@@ -1,5 +1,6 @@
 package util;
 
+import com.google.gson.Gson;
 import org.apache.commons.lang.SerializationUtils;
 
 import java.io.Serializable;

@@ -1,6 +1,6 @@
 package game.state.collections;
 
-import game.entity.Card;
+import game.entity.card.Card;
 
 import java.util.ArrayList;
 import java.util.List;

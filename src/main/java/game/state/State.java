@@ -1,6 +1,6 @@
 package game.state;
 
-import game.entity.Hero;
+import game.entity.card.character.Hero;
 import game.state.collections.Board;
 import game.state.collections.Deck;
 import game.state.collections.Hand;
@@ -38,9 +38,5 @@ public class State implements Cloneable, Serializable {
         this.hands = new HashMap<>();
 
         this.boards = new HashMap<>();
-    }
-
-    public State clone() {
-        return (State) SerializationUtils.clone(this);
     }
 }
