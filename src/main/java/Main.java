@@ -23,40 +23,52 @@ import static util.IO.read;
 
 public class Main {
 
+    private long SEED = 13245;
+    private boolean USE_RANDOM_SEED = false;
+
+    private Gson gson;
+    private Random rand;
+
     public static void main(String... args) throws IOException {
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
-        List<Minion> minions = readTestMinions(gson);
+        Main main = new Main();
+        main.init();
 
-        test(minions);
+        main.test1();
     }
 
-    private static List<Minion> readTestMinions(Gson gson) throws IOException {
-        File testCards = new File("res/entities/test.json");
+    private  void init() {
+        this.rand = new Random(USE_RANDOM_SEED ? System.currentTimeMillis() : SEED);
+        this.gson = new GsonBuilder().create();
+    }
+
+    private void test1() throws IOException {
+        File testCards = new File("src/main/resources/entities/test.json");
         Type type = new TypeToken<List<Minion>>(){}.getType();
         List<Minion> minions = gson.fromJson(read(testCards), type);
-        return minions;
-    }
-
-    private static void test(List<Minion> minions) {
-        Random r = new Random();
-
-        printj( minions);
 
         Hero hero1 = new Hero();
         Hero hero2 = new Hero();
 
         Deck deck1 = new Deck();
         Deck deck2 = new Deck();
-        for(int i = 0; i < 30; i++) {
-            deck1.add(Util.clone(minions.get(r.nextInt(minions.size()))));
-            deck2.add(Util.clone(minions.get(r.nextInt(minions.size()))));
+        List<Minion> murlocs = minions.stream()
+                .filter(m -> m.getType() == game.entity.Type.MURLOC)
+                .collect(Collectors.toList());
+        for(int i = 0; i < 5; i++) {
+            deck1.add(Util.clone(minions.get(rand.nextInt(minions.size()))));
+            deck2.add(Util.clone(murlocs.get(rand.nextInt(murlocs.size()))));
         }
 
-        Player player1 = new Human(hero1, deck1);
-        Player player2 = new Human(hero2, deck2);
+        Player player1 = new Human(hero1, deck1, "Generic Gary", rand);
+        Player player2 = new Human(hero2, deck2, "Mancy Murloc", rand);
 
-        State game = new State(player1, player2);
+        State game = new State(player1, player2, rand);
+
+        game.preGame();
+        while(!game.isOver()) {
+            game.action(game.getActivePlayer().getAction(game));
+        }
 
         printj(game);
     }

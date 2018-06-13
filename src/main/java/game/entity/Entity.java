@@ -17,22 +17,14 @@ import java.io.Serializable;
  *  Hero Power
  */
 public abstract class Entity implements Serializable {
-    protected String name;
+    protected String name = "no_name";
     protected int cost;
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getCost() {
         return cost;
-    }
-
-    public void setCost(int cost) {
-        this.cost = cost;
     }
 }

@@ -7,8 +7,6 @@ import java.util.List;
 
 public class Hand {
 
-    private final int MAX_SIZE = 10;
-
     private final List<Card> cards;
 
     public Hand() {
@@ -32,11 +30,13 @@ public class Hand {
     }
 
     /**
-     * Adds the card to the hand. Will return false and ignore ("burn") the cardif the hand is already full.
+     * Adds the card to the hand. Will return false and ignore the card if the hand is already full.
+     * TODO: Add "burned" cards (not added because the hand is full) to a list in State for later reference
      * @param card
      * @return
      */
     public boolean add(Card card) {
+        int MAX_SIZE = 10;
         if(size() >= MAX_SIZE) {
             return false;
         } else {

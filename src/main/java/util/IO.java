@@ -10,8 +10,7 @@ import static java.lang.String.format;
 
 public class IO {
 
-    //private static Gson gson = new Gson();
-    private static Gson gson = new GsonBuilder().setPrettyPrinting().create();
+    private static Gson gson = new GsonBuilder().setPrettyPrinting()/*.enableComplexMapKeySerialization()*/.create();
 
     /**
      * Prints the given String or Object convertible to String with args filling its formatting arguments.
